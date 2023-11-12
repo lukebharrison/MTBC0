@@ -15,7 +15,7 @@
 #vcftools/0.1.16
 
 ## Chose reference sequence
-REFERENCE="MTBC0.fasta"
+REFERENCE="MTBC0_v1.1.fasta"
 
 ## Exclude file in BED format of regions of MTBC0 within which NOT to call SNPs/INDELS (e.g. PE/PPE)
 EXCLUDE_FILE="MTBC0.REGIONStoDISCARD.bed"
