@@ -42,7 +42,7 @@ do
  else 
   if test -f "${FASTQDIR}${i}_pass_1.fastq.gz"
   then
-   ## The code below for read filtering mostly from Goig et al. SNP pipeline flowchart, with some modifications and adapted for kraken2.
+   ## The code below for read filtering and alignment mostly from Goig et al. SNP pipeline flowchart, with some modifications and adapted for kraken2.
    echo "Processing paired reads...."
    echo -n "trimmomatic... "
    java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.39.jar PE -threads 8 -phred33 -trimlog ${SCRATCH_DIR}${i}.trimlog ${FASTQDIR}${i}_pass_[12].fastq.gz ${SCRATCH_DIR}${i}.P1.clean.fastq ${SCRATCH_DIR}${i}.U1.clean.fastq ${SCRATCH_DIR}${i}.P2.clean.fastq ${SCRATCH_DIR}${i}.U2.clean.fastq TRAILING:10 SLIDINGWINDOW:5:20 MINLEN:20
